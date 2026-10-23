@@ -155,7 +155,7 @@ function App() {
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               spacing={1.5}
-              alignItems={{ sm: 'center' }}
+              sx={{ alignItems: { sm: 'center' } }}
             >
               <TextField
                 fullWidth
@@ -195,7 +195,7 @@ function App() {
             <Stack
               direction={{ xs: 'column', sm: 'row' }}
               spacing={1.5}
-              alignItems={{ sm: 'center' }}
+              sx={{ alignItems: { sm: 'center' } }}
             >
               <TextField
                 fullWidth
@@ -258,7 +258,7 @@ function App() {
                           <Stack
                             direction="row"
                             spacing={1}
-                            alignItems="center"
+                            sx={{ alignItems: 'center' }}
                           >
                             <ListItemText
                               primary={game.title}
@@ -291,7 +291,7 @@ function App() {
                           <Stack
                             direction={{ xs: 'column', sm: 'row' }}
                             spacing={1.5}
-                            alignItems={{ sm: 'center' }}
+                            sx={{ alignItems: { sm: 'center' } }}
                           >
                             <FormControl size="small" sx={{ minWidth: 150 }}>
                               <InputLabel id={`status-${game.id}`}>
