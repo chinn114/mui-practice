@@ -122,20 +122,28 @@ function App() {
   })
 
   return (
-    <Box className="min-h-screen bg-slate-100">
-      <AppBar position="static">
+    <Box className="min-h-screen bg-transparent">
+      <AppBar
+  position="static"
+  sx={{ backgroundColor: '#171a21', color: '#c7d5e0' }}
+>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             ゲーム管理アプリ
           </Typography>
           <Badge badgeContent={games.length} color="secondary">
-            <Chip label="登録ゲーム" color="default" />
+            <Chip
+  label="ゲーム管理アプリ"
+  sx={{ color: '#c7d5e0', backgroundColor: 'transparent' }}
+/>
           </Badge>
         </Toolbar>
       </AppBar>
 
       <Container maxWidth="md" sx={{ py: 4 }}>
-        <Paper elevation={3} sx={{ p: { xs: 2, sm: 3 } }}>
+        <Paper elevation={3} sx={{ p: { xs: 2, sm: 3 },
+    backgroundColor: 'rgba(255, 255, 255, 0.78)',
+    backdropFilter: 'blur(10px)', }}>
           <Stack spacing={2}>
             <Typography component="h1" variant="h4">
               ゲーム一覧

@@ -1,1 +1,57 @@
 @import "tailwindcss";
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  isolation: isolate;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(8, 12, 25, 0.45), rgba(8, 12, 25, 0.7)),
+    url("/mui-practice/reimu-bg.jpg") center / cover no-repeat;
+}
+body::after {
+  content: "❀";
+  position: fixed;
+  top: -8vh;
+  left: 3vw;
+  z-index: 5;
+  color: rgba(255, 190, 205, 0.72);
+  font-size: 22px;
+  pointer-events: none;
+  text-shadow:
+    10vw 12vh 0 rgba(255, 190, 205, 0.72),
+    22vw 38vh 0 rgba(255, 220, 230, 0.72),
+    34vw 8vh 0 rgba(255, 190, 205, 0.72),
+    46vw 55vh 0 rgba(255, 220, 230, 0.72),
+    58vw 24vh 0 rgba(255, 190, 205, 0.72),
+    70vw 68vh 0 rgba(255, 220, 230, 0.72),
+    82vw 15vh 0 rgba(255, 190, 205, 0.72),
+    93vw 46vh 0 rgba(255, 220, 230, 0.72);
+  animation: sakura-fall 18s linear infinite;
+}
+
+@keyframes sakura-fall {
+  from {
+    transform: translateY(-10vh);
+  }
+
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after {
+    animation: none;
+  }
+}
