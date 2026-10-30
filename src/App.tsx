@@ -142,8 +142,8 @@ function App() {
 
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Paper elevation={3} sx={{ p: { xs: 2, sm: 3 },
-    backgroundColor: 'rgba(255, 255, 255, 0.78)',
-    backdropFilter: 'blur(10px)', }}>
+    backgroundColor: 'rgba(255, 255, 255, 0.45)',
+backdropFilter: 'blur(4px)', }}>
           <Stack spacing={2}>
             <Typography component="h1" variant="h4">
               ゲーム一覧
